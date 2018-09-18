@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Inprojection</string>
+    <string name="app_name">QRScan</string>
 
     <string name="app_picker_name">应用</string>
     <string name="contents_text">纯文本</string>
