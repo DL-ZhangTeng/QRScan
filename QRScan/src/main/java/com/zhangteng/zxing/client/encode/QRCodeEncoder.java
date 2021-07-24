@@ -38,7 +38,7 @@ import java.util.Map;
  *
  * @author dswitkin@google.com (Daniel Switkin)
  */
-final class QRCodeEncoder {
+public final class QRCodeEncoder {
 
     private static final String TAG = QRCodeEncoder.class.getSimpleName();
 
@@ -52,7 +52,7 @@ final class QRCodeEncoder {
     private BarcodeFormat format;
     private final int dimension;
 
-    QRCodeEncoder(Context activity, Intent intent, int dimension) throws WriterException {
+    public QRCodeEncoder(Context activity, Intent intent, int dimension) throws WriterException {
         this.activity = activity;
         this.dimension = dimension;
         encodeContentsFromZXingIntent(intent);
