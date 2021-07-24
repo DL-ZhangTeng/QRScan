@@ -118,7 +118,7 @@ public final class QRCodeEncoder {
         }
     }
 
-    Bitmap encodeAsBitmap() throws WriterException {
+    public Bitmap encodeAsBitmap() throws WriterException {
         String contentsToEncode = contents;
         if (contentsToEncode == null) {
             return null;
