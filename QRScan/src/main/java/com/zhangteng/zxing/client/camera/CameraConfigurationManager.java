@@ -26,9 +26,9 @@ import android.view.Display;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.zhangteng.zxing.client.decode.Contents;
 import com.zhangteng.zxing.client.camera.open.CameraFacing;
 import com.zhangteng.zxing.client.camera.open.OpenCamera;
+import com.zhangteng.zxing.client.decode.Contents;
 
 /**
  * A class which deals with reading, parsing, and setting the camera parameters which are used to

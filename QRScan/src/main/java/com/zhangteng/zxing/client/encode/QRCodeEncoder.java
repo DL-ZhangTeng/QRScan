@@ -20,9 +20,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 
-import com.zhangteng.zxing.R;
 import com.zhangteng.zxing.BarcodeFormat;
 import com.zhangteng.zxing.EncodeHintType;
+import com.zhangteng.zxing.R;
 import com.zhangteng.zxing.WriterException;
 import com.zhangteng.zxing.client.decode.Contents;
 import com.zhangteng.zxing.client.decode.Intents;

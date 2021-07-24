@@ -41,7 +41,7 @@ public final class Intents {
     /**
      * By default, sending this will decode all barcodes that we understand. However it
      * may be useful to limit scanning to certain formats. Use
-     * {@link android.content.Intent#putExtra(String, String)} with one of the values below.
+     * {@link Intent#putExtra(String, String)} with one of the values below.
      *
      * Setting this is effectively shorthand for setting explicit formats with {@link #FORMATS}.
      * It is overridden by that setting.
@@ -93,38 +93,37 @@ public final class Intents {
     public static final String PROMPT_MESSAGE = "PROMPT_MESSAGE";
 
     /**
-     * If a barcode is found, Barcodes returns {@link android.app.Activity#RESULT_OK} to
-     * {@link android.app.Activity#onActivityResult(int, int, android.content.Intent)}
+     * If a barcode is found, Barcodes returns
      * of the app which requested the scan via
-     * {@link android.app.Activity#startActivityForResult(android.content.Intent, int)}
+     * {@link android.app.Activity#startActivityForResult(Intent, int)}
      * The barcodes contents can be retrieved with
-     * {@link android.content.Intent#getStringExtra(String)}.
+     * {@link Intent#getStringExtra(String)}.
      * If the user presses Back, the result code will be {@link android.app.Activity#RESULT_CANCELED}.
      */
     public static final String RESULT = "SCAN_RESULT";
 
     /**
-     * Call {@link android.content.Intent#getStringExtra(String)} with {@code RESULT_FORMAT}
+     * Call {@link Intent#getStringExtra(String)} with {@code RESULT_FORMAT}
      * to determine which barcode format was found.
      * See {@link com.zhangteng.zxing.BarcodeFormat} for possible values.
      */
     public static final String RESULT_FORMAT = "SCAN_RESULT_FORMAT";
 
     /**
-     * Call {@link android.content.Intent#getByteArrayExtra(String)} with {@code RESULT_BYTES}
+     * Call {@link Intent#getByteArrayExtra(String)} with {@code RESULT_BYTES}
      * to get a {@code byte[]} of raw bytes in the barcode, if available.
      */
     public static final String RESULT_BYTES = "SCAN_RESULT_BYTES";
 
     /**
      * Key for the value of {@link com.zhangteng.zxing.ResultMetadataType#ORIENTATION}, if available.
-     * Call {@link android.content.Intent#getIntArrayExtra(String)} with {@code RESULT_ORIENTATION}.
+     * Call {@link Intent#getIntArrayExtra(String)} with {@code RESULT_ORIENTATION}.
      */
     public static final String RESULT_ORIENTATION = "SCAN_RESULT_ORIENTATION";
 
     /**
      * Key for the value of {@link com.zhangteng.zxing.ResultMetadataType#ERROR_CORRECTION_LEVEL}, if available.
-     * Call {@link android.content.Intent#getStringExtra(String)} with {@code RESULT_ERROR_CORRECTION_LEVEL}.
+     * Call {@link Intent#getStringExtra(String)} with {@code RESULT_ERROR_CORRECTION_LEVEL}.
      */
     public static final String RESULT_ERROR_CORRECTION_LEVEL = "SCAN_RESULT_ERROR_CORRECTION_LEVEL";
 
@@ -132,7 +131,7 @@ public final class Intents {
      * Prefix for keys that map to the values of {@link com.zhangteng.zxing.ResultMetadataType#BYTE_SEGMENTS},
      * if available. The actual values will be set under a series of keys formed by adding 0, 1, 2, ...
      * to this prefix. So the first byte segment is under key "SCAN_RESULT_BYTE_SEGMENTS_0" for example.
-     * Call {@link android.content.Intent#getByteArrayExtra(String)} with these keys.
+     * Call {@link Intent#getByteArrayExtra(String)} with these keys.
      */
     public static final String RESULT_BYTE_SEGMENTS_PREFIX = "SCAN_RESULT_BYTE_SEGMENTS_";
 
@@ -151,8 +150,8 @@ public final class Intents {
     public static final String ACTION = "com.google.zxing.client.android.ENCODE";
 
     /**
-     * The data to encode. Use {@link android.content.Intent#putExtra(String, String)} or
-     * {@link android.content.Intent#putExtra(String, android.os.Bundle)},
+     * The data to encode. Use {@link Intent#putExtra(String, String)} or
+     * {@link Intent#putExtra(String, android.os.Bundle)},
      * depending on the type and format specified. Non-QR Code formats should
      * just use a String here. For QR Code, see Contents for details.
      */
@@ -160,13 +159,13 @@ public final class Intents {
 
     /**
      * The type of data being supplied if the format is QR Code. Use
-     * {@link android.content.Intent#putExtra(String, String)} with one of {@link Contents.Type}.
+     * {@link Intent#putExtra(String, String)} with one of {@link Contents.Type}.
      */
     public static final String TYPE = "ENCODE_TYPE";
 
     /**
      * The barcode format to be displayed. If this isn't specified or is blank,
-     * it defaults to QR Code. Use {@link android.content.Intent#putExtra(String, String)}, where
+     * it defaults to QR Code. Use {@link Intent#putExtra(String, String)}, where
      * format is one of {@link com.zhangteng.zxing.BarcodeFormat}.
      */
     public static final String FORMAT = "ENCODE_FORMAT";

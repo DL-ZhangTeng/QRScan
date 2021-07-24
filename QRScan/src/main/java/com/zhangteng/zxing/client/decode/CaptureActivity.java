@@ -39,9 +39,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.zhangteng.zxing.R;
 import com.zhangteng.zxing.BarcodeFormat;
 import com.zhangteng.zxing.DecodeHintType;
+import com.zhangteng.zxing.R;
 import com.zhangteng.zxing.Result;
 import com.zhangteng.zxing.ResultMetadataType;
 import com.zhangteng.zxing.ResultPoint;
